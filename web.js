@@ -2,8 +2,10 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
+var buffer = new Buffer("Hola mundo!");
+
 app.get('/', function(request, response) {
-  response.send('Hello world!');
+  response.send(buffer);
 });
 
 var port = process.env.PORT || 5000;
